@@ -1,0 +1,864 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Anjanadri Elite Boys PG | Premium Student Accommodation, Yelahanka</title>
+  <meta name="description" content="Premium student PG accommodation near NMIT Backgate, Yelahanka, Bengaluru. Fully furnished rooms, homely food, Wi-Fi, hot water & 24/7 security." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --gold: #C9A84C;
+      --gold-light: #F0D080;
+      --navy: #0F1F3D;
+      --navy-mid: #1A2F52;
+      --navy-light: #243B6B;
+      --white: #FFFFFF;
+      --off-white: #F8F6F1;
+      --text-dark: #1A1A2E;
+      --text-mid: #4A4A6A;
+      --green: #2E7D32;
+      --green-light: #E8F5E9;
+      --wa-green: #25D366;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      color: var(--text-dark);
+      background: var(--white);
+      overflow-x: hidden;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 5%;
+      background: rgba(15, 31, 61, 0.96);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(201,168,76,0.25);
+    }
+
+    .nav-logo {
+      font-family: 'Playfair Display', serif;
+      color: var(--gold);
+      font-size: 1.1rem;
+      letter-spacing: 0.02em;
+      line-height: 1.2;
+    }
+
+    .nav-logo span { color: var(--white); display: block; font-size: 0.7rem; font-family: 'Inter', sans-serif; font-weight: 400; letter-spacing: 0.12em; text-transform: uppercase; }
+
+    .nav-cta {
+      background: var(--wa-green);
+      color: var(--white);
+      text-decoration: none;
+      padding: 9px 20px;
+      border-radius: 50px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .nav-cta:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(37,211,102,0.4); }
+
+    /* ── HERO ── */
+    #hero {
+      min-height: 100vh;
+      background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 50%, #0D2644 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 100px 6% 60px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    #hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 60% 50% at 20% 80%, rgba(201,168,76,0.08) 0%, transparent 60%),
+        radial-gradient(ellipse 50% 60% at 80% 20%, rgba(201,168,76,0.06) 0%, transparent 60%);
+    }
+
+    .hero-badge {
+      display: inline-block;
+      background: rgba(201,168,76,0.15);
+      border: 1px solid rgba(201,168,76,0.4);
+      color: var(--gold-light);
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      padding: 7px 18px;
+      border-radius: 50px;
+      margin-bottom: 22px;
+    }
+
+    .hero-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.4rem, 6vw, 4.2rem);
+      font-weight: 800;
+      color: var(--white);
+      line-height: 1.12;
+      margin-bottom: 12px;
+      letter-spacing: -0.01em;
+    }
+
+    .hero-title .gold { color: var(--gold); }
+
+    .hero-subtitle {
+      font-size: clamp(0.95rem, 2.2vw, 1.15rem);
+      color: rgba(255,255,255,0.7);
+      margin-bottom: 36px;
+      font-weight: 400;
+      letter-spacing: 0.02em;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 14px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary {
+      background: var(--wa-green);
+      color: var(--white);
+      text-decoration: none;
+      padding: 16px 34px;
+      border-radius: 50px;
+      font-size: 1rem;
+      font-weight: 700;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: transform 0.2s, box-shadow 0.2s;
+      box-shadow: 0 4px 24px rgba(37,211,102,0.35);
+    }
+
+    .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 8px 32px rgba(37,211,102,0.5); }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--gold-light);
+      text-decoration: none;
+      padding: 15px 30px;
+      border-radius: 50px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      border: 1.5px solid rgba(201,168,76,0.5);
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.2s;
+    }
+
+    .btn-outline:hover { background: rgba(201,168,76,0.1); border-color: var(--gold); }
+
+    .hero-stats {
+      display: flex;
+      gap: 40px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 52px;
+      padding-top: 40px;
+      border-top: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .stat { text-align: center; }
+    .stat-num { font-size: 2rem; font-weight: 800; color: var(--gold); font-family: 'Playfair Display', serif; }
+    .stat-label { font-size: 0.78rem; color: rgba(255,255,255,0.55); text-transform: uppercase; letter-spacing: 0.1em; margin-top: 3px; }
+
+    /* ── SECTIONS ── */
+    section { padding: 80px 6%; }
+
+    .section-label {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 10px;
+    }
+
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      font-weight: 700;
+      color: var(--navy);
+      line-height: 1.2;
+      margin-bottom: 16px;
+    }
+
+    .section-body {
+      font-size: 1.02rem;
+      color: var(--text-mid);
+      line-height: 1.78;
+      max-width: 680px;
+    }
+
+    /* ── ABOUT ── */
+    #about {
+      background: var(--off-white);
+    }
+
+    .about-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: center;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .about-visual {
+      background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
+      border-radius: 20px;
+      padding: 44px 36px;
+      color: var(--white);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .about-visual::before {
+      content: '';
+      position: absolute;
+      top: -40px; right: -40px;
+      width: 180px; height: 180px;
+      border-radius: 50%;
+      background: rgba(201,168,76,0.12);
+    }
+
+    .about-visual-icon { font-size: 3rem; margin-bottom: 16px; }
+    .about-visual h3 { font-family: 'Playfair Display', serif; font-size: 1.5rem; color: var(--gold); margin-bottom: 12px; }
+    .about-visual p { color: rgba(255,255,255,0.75); font-size: 0.92rem; line-height: 1.7; }
+
+    .highlight-chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 20px;
+    }
+
+    .chip {
+      background: rgba(201,168,76,0.15);
+      border: 1px solid rgba(201,168,76,0.3);
+      color: var(--gold-light);
+      font-size: 0.78rem;
+      font-weight: 600;
+      padding: 5px 14px;
+      border-radius: 50px;
+    }
+
+    /* ── AMENITIES ── */
+    #amenities { background: var(--white); }
+
+    .amenities-header { text-align: center; margin-bottom: 52px; }
+    .amenities-header .section-body { margin: 0 auto; }
+
+    .amenities-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 22px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .amenity-card {
+      background: var(--off-white);
+      border-radius: 16px;
+      padding: 28px 26px;
+      border: 1.5px solid transparent;
+      transition: all 0.25s;
+      display: flex;
+      gap: 18px;
+      align-items: flex-start;
+    }
+
+    .amenity-card:hover {
+      border-color: var(--gold);
+      background: var(--white);
+      box-shadow: 0 8px 32px rgba(201,168,76,0.12);
+      transform: translateY(-3px);
+    }
+
+    .amenity-icon { font-size: 2rem; flex-shrink: 0; margin-top: 2px; }
+
+    .amenity-card h4 {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 6px;
+    }
+
+    .amenity-card p { font-size: 0.88rem; color: var(--text-mid); line-height: 1.65; }
+
+    /* ── FOOD ── */
+    #food {
+      background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 100%);
+      color: var(--white);
+    }
+
+    .food-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: start;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    #food .section-title { color: var(--white); }
+    #food .section-body { color: rgba(255,255,255,0.72); }
+
+    .food-features {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      margin-top: 32px;
+    }
+
+    .food-feature {
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+      background: rgba(255,255,255,0.07);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 14px;
+      padding: 20px;
+      transition: background 0.2s;
+    }
+
+    .food-feature:hover { background: rgba(255,255,255,0.11); }
+    .food-feature-icon { font-size: 1.6rem; flex-shrink: 0; }
+    .food-feature h4 { font-size: 0.95rem; font-weight: 700; color: var(--gold-light); margin-bottom: 4px; }
+    .food-feature p { font-size: 0.86rem; color: rgba(255,255,255,0.65); line-height: 1.6; }
+
+    .food-image-panel {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(201,168,76,0.2);
+      border-radius: 20px;
+      padding: 36px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .meal-row {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      background: rgba(255,255,255,0.05);
+      border-radius: 10px;
+      padding: 14px 18px;
+      border-left: 3px solid var(--gold);
+    }
+
+    .meal-time { font-size: 0.75rem; font-weight: 700; color: var(--gold); text-transform: uppercase; letter-spacing: 0.08em; min-width: 80px; }
+    .meal-name { font-size: 0.9rem; color: rgba(255,255,255,0.85); }
+
+    /* ── ROOMS ── */
+    #rooms { background: var(--off-white); }
+
+    .rooms-header { text-align: center; margin-bottom: 52px; }
+    .rooms-header .section-body { margin: 0 auto; }
+
+    .rooms-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      max-width: 1000px;
+      margin: 0 auto 40px;
+    }
+
+    .room-card {
+      background: var(--white);
+      border-radius: 20px;
+      padding: 36px 28px;
+      text-align: center;
+      border: 2px solid transparent;
+      transition: all 0.25s;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .room-card.featured {
+      border-color: var(--gold);
+      background: linear-gradient(160deg, var(--navy) 0%, var(--navy-light) 100%);
+      color: var(--white);
+    }
+
+    .room-card:not(.featured):hover {
+      border-color: var(--gold);
+      box-shadow: 0 10px 40px rgba(201,168,76,0.15);
+      transform: translateY(-4px);
+    }
+
+    .room-badge {
+      position: absolute;
+      top: 16px; right: 16px;
+      background: var(--gold);
+      color: var(--navy);
+      font-size: 0.68rem;
+      font-weight: 800;
+      padding: 4px 10px;
+      border-radius: 50px;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+
+    .room-icon { font-size: 2.8rem; margin-bottom: 16px; }
+    .room-name { font-family: 'Playfair Display', serif; font-size: 1.35rem; font-weight: 700; margin-bottom: 10px; }
+    .room-card.featured .room-name { color: var(--gold); }
+    .room-desc { font-size: 0.88rem; color: var(--text-mid); line-height: 1.6; }
+    .room-card.featured .room-desc { color: rgba(255,255,255,0.7); }
+
+    .deposit-note {
+      background: var(--green-light);
+      border: 1.5px solid #A5D6A7;
+      border-radius: 14px;
+      padding: 20px 24px;
+      max-width: 700px;
+      margin: 0 auto;
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+    }
+
+    .deposit-note-icon { font-size: 1.4rem; flex-shrink: 0; }
+    .deposit-note p { font-size: 0.9rem; color: var(--green); line-height: 1.65; font-weight: 500; }
+
+    /* ── CONTACT ── */
+    #contact {
+      background: linear-gradient(135deg, var(--navy) 0%, #081828 100%);
+      text-align: center;
+      padding: 90px 6%;
+    }
+
+    #contact .section-label { color: var(--gold); }
+    #contact .section-title { color: var(--white); margin-bottom: 16px; }
+    #contact .section-body { color: rgba(255,255,255,0.65); margin: 0 auto 52px; }
+
+    .qr-row {
+      display: flex;
+      gap: 40px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 48px;
+    }
+
+    .qr-card {
+      background: var(--white);
+      border-radius: 20px;
+      padding: 28px 32px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 14px;
+      min-width: 200px;
+      box-shadow: 0 8px 40px rgba(0,0,0,0.35);
+    }
+
+    .qr-card img {
+      width: 150px;
+      height: 150px;
+      object-fit: contain;
+      border-radius: 10px;
+    }
+
+    .qr-label {
+      font-size: 0.82rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--text-mid);
+    }
+
+    .qr-card.wa .qr-label { color: var(--wa-green); }
+    .qr-card.google .qr-label { color: #4285F4; }
+
+    .contact-details {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      align-items: center;
+      margin-bottom: 36px;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: rgba(255,255,255,0.85);
+      font-size: 0.98rem;
+    }
+
+    .contact-item .icon-circle {
+      width: 38px; height: 38px;
+      border-radius: 50%;
+      background: rgba(201,168,76,0.15);
+      border: 1px solid rgba(201,168,76,0.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+      flex-shrink: 0;
+    }
+
+    .contact-item a {
+      color: rgba(255,255,255,0.85);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .contact-item a:hover { color: var(--gold-light); }
+
+    .btn-wa-large {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--wa-green);
+      color: var(--white);
+      text-decoration: none;
+      padding: 18px 44px;
+      border-radius: 50px;
+      font-size: 1.05rem;
+      font-weight: 700;
+      box-shadow: 0 6px 28px rgba(37,211,102,0.4);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .btn-wa-large:hover { transform: translateY(-3px); box-shadow: 0 10px 36px rgba(37,211,102,0.55); }
+
+    /* ── FOOTER ── */
+    footer {
+      background: #060F1C;
+      text-align: center;
+      padding: 22px 6%;
+      color: rgba(255,255,255,0.3);
+      font-size: 0.78rem;
+    }
+
+    /* ── FLOATING WA BUTTON ── */
+    .float-wa {
+      position: fixed;
+      bottom: 28px;
+      right: 28px;
+      z-index: 200;
+      width: 58px;
+      height: 58px;
+      background: var(--wa-green);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.6rem;
+      box-shadow: 0 4px 20px rgba(37,211,102,0.5);
+      text-decoration: none;
+      transition: transform 0.2s, box-shadow 0.2s;
+      animation: pulse-wa 2.5s infinite;
+    }
+
+    .float-wa:hover { transform: scale(1.12); box-shadow: 0 8px 30px rgba(37,211,102,0.7); animation: none; }
+
+    @keyframes pulse-wa {
+      0%, 100% { box-shadow: 0 4px 20px rgba(37,211,102,0.5); }
+      50% { box-shadow: 0 4px 32px rgba(37,211,102,0.8), 0 0 0 8px rgba(37,211,102,0.12); }
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 768px) {
+      section { padding: 60px 5%; }
+      .about-inner, .food-inner { grid-template-columns: 1fr; gap: 36px; }
+      .rooms-grid { grid-template-columns: 1fr; max-width: 360px; }
+      .hero-stats { gap: 24px; }
+      .qr-row { gap: 24px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- FLOATING WHATSAPP -->
+<a href="https://wa.me/919739419645" target="_blank" class="float-wa" aria-label="Chat on WhatsApp">💬</a>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">
+    Anjanadri Elite Boys PG
+    <span>Premium Student Accommodation</span>
+  </div>
+  <a href="https://wa.me/919739419645" target="_blank" class="nav-cta">
+    📲 Book Now
+  </a>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div style="position:relative; z-index:1; max-width:800px;">
+    <div class="hero-badge">✨ Now Open for Admissions · 2025–26 Batch</div>
+    <h1 class="hero-title">
+      <span class="gold">Anjanadri Elite</span><br/>Boys PG
+    </h1>
+    <p class="hero-subtitle">Premium Student Accommodation · Near NMIT Backgate, Yelahanka, Bengaluru</p>
+    <div class="hero-buttons">
+      <a href="https://wa.me/919739419645" target="_blank" class="btn-primary">
+        💬 Book Your Room Now
+      </a>
+      <a href="#about" class="btn-outline">
+        Explore ↓
+      </a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat">
+        <div class="stat-num">3</div>
+        <div class="stat-label">Room Types</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">24/7</div>
+        <div class="stat-label">Security & CCTV</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">4×</div>
+        <div class="stat-label">Meals per Day</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">100%</div>
+        <div class="stat-label">Brand New</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="about-inner">
+    <div>
+      <div class="section-label">About the Property</div>
+      <h2 class="section-title">A Brand New Home Away From Home</h2>
+      <p class="section-body">
+        Welcome to Yelahanka's premier accommodation designed for the modern student. Nestled in a calm, quiet, and green neighborhood directly opposite a playground, Anjanadri Elite balances comfort, convenience, and a stellar study environment. Ideally located within walking distance of both Nitte Meenakshi Institute of Technology (NMIT) and Manipal Academy of Higher Education, our freshly constructed building is filled with natural light and fresh air — the perfect base for your academic journey.
+      </p>
+    </div>
+    <div class="about-visual">
+      <div class="about-visual-icon">🏛️</div>
+      <h3>Why Students Choose Us</h3>
+      <p>A freshly constructed building in a calm green neighborhood — the perfect backdrop to focus, rest, and thrive during your academic journey.</p>
+      <div class="highlight-chips">
+        <span class="chip">Minutes from NMIT</span>
+        <span class="chip">Green Neighborhood</span>
+        <span class="chip">Opposite Playground</span>
+        <span class="chip">Natural Light</span>
+        <span class="chip">Brand New Building</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AMENITIES -->
+<section id="amenities">
+  <div class="amenities-header">
+    <div class="section-label">Amenities</div>
+    <h2 class="section-title">Designed For Your Comfort &amp; Convenience</h2>
+    <p class="section-body">Every detail at Anjanadri Elite is curated to give you the environment you need to excel.</p>
+  </div>
+  <div class="amenities-grid">
+    <div class="amenity-card">
+      <div class="amenity-icon">🛏️</div>
+      <div>
+        <h4>Fully Furnished Rooms</h4>
+        <p>Spacious layouts with dedicated wall-mounted wardrobes, study tables, and study chairs for every resident.</p>
+      </div>
+    </div>
+    <div class="amenity-card">
+      <div class="amenity-icon">🦟</div>
+      <div>
+        <h4>Mosquito-Mesh Windows</h4>
+        <p>Keep your room breezy, bright, and insect-free — sleep soundly without distractions.</p>
+      </div>
+    </div>
+    <div class="amenity-card">
+      <div class="amenity-icon">📶</div>
+      <div>
+        <h4>High-Speed Wi-Fi & Power Backup</h4>
+        <p>Uninterrupted internet for your online exams, projects, and entertainment. Always on.</p>
+      </div>
+    </div>
+    <div class="amenity-card">
+      <div class="amenity-icon">🧼</div>
+      <div>
+        <h4>Hassle-Free Maintenance</h4>
+        <p>Daily professional housekeeping and easily accessible washing machines for your laundry needs.</p>
+      </div>
+    </div>
+    <div class="amenity-card">
+      <div class="amenity-icon">🚿</div>
+      <div>
+        <h4>Eco-Friendly Hot Water</h4>
+        <p>Centralized high-performance heatpump system ensuring consistent hot water around the clock.</p>
+      </div>
+    </div>
+    <div class="amenity-card">
+      <div class="amenity-icon">🛡️</div>
+      <div>
+        <h4>Safety First</h4>
+        <p>24/7 CCTV surveillance, security presence, and clean RO drinking water — your safety is non-negotiable.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOD -->
+<section id="food">
+  <div class="food-inner">
+    <div>
+      <div class="section-label">Mess & Food Facility</div>
+      <h2 class="section-title">Hygienic, Homely &amp; High Quality</h2>
+      <p class="section-body">
+        We understand that good food is crucial for student life. We serve high-quality, freshly prepared home-cooked meals every single day.
+      </p>
+      <div class="food-features">
+        <div class="food-feature">
+          <div class="food-feature-icon">🍽️</div>
+          <div>
+            <h4>Daily Meal Schedule</h4>
+            <p>Breakfast, Lunch, Dinner, and Tea served twice a day — four wholesome servings to keep you energized.</p>
+          </div>
+        </div>
+        <div class="food-feature">
+          <div class="food-feature-icon">🍗</div>
+          <div>
+            <h4>Menu Diversity</h4>
+            <p>Weekly special Chicken &amp; Egg dishes to break the monotony and add excitement to your week.</p>
+          </div>
+        </div>
+        <div class="food-feature">
+          <div class="food-feature-icon">🥦</div>
+          <div>
+            <h4>Pure Vegetarian Care</h4>
+            <p>Separate top-notch food items cooked carefully for our vegetarian residents, with full hygiene standards.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="food-image-panel">
+      <div style="color: var(--gold); font-size: 0.75rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 6px;">Daily Meal Schedule</div>
+      <div class="meal-row">
+        <div class="meal-time">☀️ Morning</div>
+        <div class="meal-name">Breakfast</div>
+      </div>
+      <div class="meal-row">
+        <div class="meal-time">🌞 Noon</div>
+        <div class="meal-name">Wholesome Lunch</div>
+      </div>
+      <div class="meal-row">
+        <div class="meal-time">☕ Evening</div>
+        <div class="meal-name">Evening Tea / Snacks</div>
+      </div>
+      <div class="meal-row">
+        <div class="meal-time">🌙 Night</div>
+        <div class="meal-name">Dinner (Home-Style)</div>
+      </div>
+      <div style="margin-top: 20px; padding: 18px; background: rgba(201,168,76,0.1); border-radius: 12px; border: 1px solid rgba(201,168,76,0.25);">
+        <p style="color: var(--gold-light); font-size: 0.85rem; line-height: 1.65; text-align: center;">🍳 Weekly special <strong>Chicken &amp; Egg</strong> dishes every week. Separate vegetarian meals cooked with care.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ROOMS -->
+<section id="rooms">
+  <div class="rooms-header">
+    <div class="section-label">Accommodation Choices</div>
+    <h2 class="section-title">Choose Your Space</h2>
+    <p class="section-body">From private suites to budget-friendly shared rooms — find the occupancy that suits your lifestyle and budget.</p>
+  </div>
+  <div class="rooms-grid">
+    <div class="room-card">
+      <div class="room-icon">🛏️</div>
+      <div class="room-name">Single Occupancy</div>
+      <p class="room-desc">For ultimate privacy and focus. Your personal space, entirely yours.</p>
+    </div>
+    <div class="room-card">
+      <div class="room-icon">🛏️🛏️</div>
+      <div class="room-name">2-Sharing Room</div>
+      <p class="room-desc">Perfect balance of companionship and personal space. Great for new friends.</p>
+    </div>
+    <div class="room-card featured">
+      <div class="room-badge">Popular</div>
+      <div class="room-icon">👥</div>
+      <div class="room-name">3-Sharing Room</div>
+      <p class="room-desc">Spacious, budget-friendly community living. Ideal for a lively study group.</p>
+    </div>
+  </div>
+  <div class="deposit-note">
+    <div class="deposit-note-icon">✅</div>
+    <p><strong>Transparent Deposit Policy:</strong> Simple, minimal maintenance deduction. The remainder of your security deposit is <strong>fully refunded</strong> when you vacate — no hidden charges, no surprises.</p>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="section-label">Contact & Location</div>
+  <h2 class="section-title">Secure Your Spot Today!</h2>
+  <p class="section-body">
+    Admissions are now officially open for the current academic batch. Skip the rush — scan the QR code below to chat with us immediately on WhatsApp, or dial our direct helpline.
+  </p>
+
+  <div class="qr-row">
+    <div class="qr-card wa">
+      <img src="images/whatsapp-qr.png" alt="WhatsApp QR Code" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+      <div style="display:none; width:150px; height:150px; background:#f0f0f0; border-radius:10px; align-items:center; justify-content:center; font-size:2.5rem;">💬</div>
+      <div class="qr-label">💬 WhatsApp Us</div>
+    </div>
+    <div class="qr-card google">
+      <img src="images/google-qr.png" alt="Google Review QR Code" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+      <div style="display:none; width:150px; height:150px; background:#f0f0f0; border-radius:10px; align-items:center; justify-content:center; font-size:2.5rem;">⭐</div>
+      <div class="qr-label">⭐ Check us on Google</div>
+    </div>
+  </div>
+
+  <div class="contact-details">
+    <div class="contact-item">
+      <div class="icon-circle">📱</div>
+      <div>
+        <a href="tel:+919739419645">+91 97394 19645</a>
+        &nbsp;/&nbsp;
+        <a href="tel:+919632633683">+91 96326 33683</a>
+      </div>
+    </div>
+    <div class="contact-item">
+      <div class="icon-circle">📍</div>
+      <div>#1, Survey #24/3, 3rd C Cross, Govindapura, ISRO Layout,<br/>Nitte Meenakshi College Backgate, Yelahanka, Bengaluru – 560064</div>
+    </div>
+  </div>
+
+  <a href="https://wa.me/919739419645" target="_blank" class="btn-wa-large">
+    💬 Chat with Us on WhatsApp
+  </a>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2026 Anjanadri Elite Boys PG · Yelahanka, Bengaluru · All Rights Reserved</p>
+  <p style="margin-top: 6px;">📱 +91 97394 19645 &nbsp;|&nbsp; +91 96326 33683</p>
+</footer>
+
+</body>
+</html>
